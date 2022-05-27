@@ -25,10 +25,11 @@
 #include "splinterdb/public_util.h"
 
 typedef enum message_type {
+   MESSAGE_TYPE_INVALID = 0,
    MESSAGE_TYPE_INSERT,
    MESSAGE_TYPE_UPDATE,
    MESSAGE_TYPE_DELETE,
-   MESSAGE_TYPE_INVALID,
+   MESSAGE_TYPE_VALID = MESSAGE_TYPE_DELETE,
 } message_type;
 
 /*

@@ -46,8 +46,9 @@ typedef uint64 allocator_root_id;
  * ----------------------------------------------------------------------------
  */
 typedef enum page_type {
-   PAGE_TYPE_FIRST = 0,
-   PAGE_TYPE_TRUNK = PAGE_TYPE_FIRST,
+   PAGE_TYPE_UNINIT = 0,
+   PAGE_TYPE_FIRST  = 1,
+   PAGE_TYPE_TRUNK  = PAGE_TYPE_FIRST,
    PAGE_TYPE_BRANCH,
    PAGE_TYPE_MEMTABLE,
    PAGE_TYPE_FILTER,
@@ -59,7 +60,8 @@ typedef enum page_type {
    PAGE_TYPE_INVALID,
 } page_type;
 
-static const char *const page_type_str[] = {"trunk",
+static const char *const page_type_str[] = {"uninitialized",
+                                            "trunk",
                                             "branch",
                                             "memtable",
                                             "filter",

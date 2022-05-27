@@ -24,7 +24,7 @@ message_type_string(message_type type)
       case MESSAGE_TYPE_DELETE:
          return "delete";
       default:
-         debug_assert(FALSE, "Invalid message type");
+         debug_assert(FALSE, "Invalid message type=%d", type);
          return "invalid";
    }
 }
