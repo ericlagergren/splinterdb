@@ -6809,7 +6809,7 @@ trunk_lookup_async(trunk_handle      *spl,    // IN
                   break;
                default:
                   platform_error_log("Invalid async_lookup_state=%d\n",
-                          ctxt->lookup_state);
+                                     ctxt->lookup_state);
                   platform_assert(0);
             }
             ctxt->branch = trunk_get_branch(spl, node, branch_no);
@@ -6906,7 +6906,7 @@ trunk_lookup_async(trunk_handle      *spl,    // IN
                   continue;
                default:
                   platform_error_log("Invalid async_lookup_state=%d\n",
-                          ctxt->lookup_state);
+                                     ctxt->lookup_state);
                   platform_assert(0);
             }
             break;
